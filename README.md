@@ -23,3 +23,41 @@ E.g  ruby.rgr :
 template: 
 tmuxamator:
 
+MVP
+
+TMUX SPLIT 
+
+
+#!/bin/bash
+
+tmux new -s work -d
+tmux rename-window -t work vim
+tmux send-keys -t work 'vim' C-m
+tmux new-window -t work
+tmux rename-window -t work server
+tmux send-keys -t work './bin/rails s' C-m
+tmux split-window -v -t work
+tmux send-keys -t work './bin/sidekiq' C-m
+tmux select-window -t work:1
+tmux attach -t work
+
+
+
+
+
+
+
+TEMPLATE FOR CODE 
+TEMPLATE FOR SPEC 
+RSPEC 
+GAURD_RSPEC
+COVERAGE FOR THAT SPEC 
+NVIM 
+
+
+
+Editors:
+
+vim  -o code.rb code_test.rb
+nvim -o code.rb code_test.rb 
+emacs -nw code.rb code_test.rb 
