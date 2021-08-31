@@ -1,0 +1,13 @@
+require 'spec_helper'
+SingleCov.covered!
+
+require_relative '../lib/<%= options[:name] %>'
+
+describe <%= options[:name].capitalize %> do
+  context '' do
+    describe '' do
+      it '' do
+      end
+    end
+  end
+end 

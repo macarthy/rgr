@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-require "rubygems" # ruby1.9 doesn't "require" it though
-require "thor"
-require '../lib/rgr'
-
+require 'rubygems' # ruby1.9 doesn't "require" it though
+require 'thor'
+require_relative '../lib/rgr'
 
 Rgr.start(ARGV)
